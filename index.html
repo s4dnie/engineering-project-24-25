@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+</html>
+
+<head>
+    <title>Neurodivergent Cleaning Buddy</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sydnie Williams">
+    <meta name="description" content="2024-25 school year engineering project">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Method to The Mess</h1>
+    <p>an engineering project by syd</p>
+
+    <div>hello! welcome to the cleanin</div>
+    <div>choose areas of your bedroom to get started:
+
+        <!--button selection-->
+        <form id="form-id">
+            <input type="checkbox" id="bed" value="display_bed" class="check-style">
+            <label for="bed">Bed</label>
+            <br>
+            <input type="checkbox" id="desk_vanity" value="display_desk_vanity" class="check-style">
+            <label for="desk_vanity">Desk or Vanity Table</label>
+            <br>
+            <input type="checkbox" id="nightstand" value="display_nightstand" class="check-style">
+            <label for="nightstand">Nightstand</label>
+            <br>
+            <input type="checkbox" id="floor" value="display_floor" class="check-style">
+            <label for="floor">Floor</label>
+            <br>
+            <input type="checkbox" id="chairs_couch" value="display_chairs_couch" class="check-style">
+            <label for="chairs_couch">Chairs or Couch</label>
+            <br>
+
+            <!--timer length selection-->
+
+            <select name="select" id="select" value="select">
+                <option value="3">3 minutes</option>
+                <option value="5">5 minutes</option>
+                <option value="7">7 minutes</option>
+            </select>
+            <label for="select">Break length</label>
+            <br>
+            <!--submit choices-->
+
+            <input type="submit" id="submit-button" name="submit" value="Let's Go!">
+        </form>
+        <script>
+            const form = document.getElementById("form-id");
+            const checkboxes = document.querySelectorAll(".check-style");
+            var timeselect = document.getElementById("select");
+
+            function getSelections() {
+                var x = timeselect.selectedIndex;
+                var y = timeselect.options
+
+                alert("Selected Time: " + y[x].index + " is " + y[x].text);
+            };
+
+            form.addEventListener("submit", getSelections());
+        </script>
+    </div>
+</body>
